@@ -35,8 +35,9 @@
 import {ref, defineComponent} from 'vue'
 import Navbar from '../Navbar/index.vue'
 import Sidebar from '../Sidebar/index.vue'
-import { DangerModal, WarningModal, SuccessModal } from '../Modals/index.ts'
+import { DangerModal, WarningModal, SuccessModal } from '../Modals/index'
 import Toasts from "../Toasts/index.vue";
+
 
 export default defineComponent({
   name: 'Main',
@@ -57,15 +58,15 @@ export default defineComponent({
     }
   },
   methods: {
-    toggle() {
+    toggle(): void {
       this.isOpen = !this.isOpen
     },
-    hideModals() {
+    hideModals(): void {
       this.isOpenDangerModal = false
       this.isOpenWarningModal = false
       this.isOpenSuccessModal = false
     },
-    sendMessage() {
+    sendMessage(): void {
       const toast= {
         title: 'Тест',
         text: 'Какой-то текст',

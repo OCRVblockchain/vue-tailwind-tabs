@@ -32,7 +32,7 @@
 import {defineComponent} from 'vue'
 
 interface Toast {
-  id?: number,
+  id: string,
   title: string,
   text: string,
   type: 'error' | 'warning' | 'success'
@@ -51,19 +51,21 @@ export default defineComponent({
   },
   mounted() {
     this.emitter.on('toast', (toast: Toast) => {
-      toast.id = this.getToastId()
-      this.toasts.push(toast)
-
-      setTimeout(() => {
-        this.closeToast(toast.id)
-      }, 5000)
+      const id = this.getToastUuid()
+      if (typeof id !== 'undefined') {
+        toast.id = id
+        this.toasts.push(toast)
+        setTimeout(() => {
+          this.closeToast(toast.id)
+        }, 5000)
+      }
     })
   },
   methods: {
-    getToastId() {
+    getToastUuid(): string {
       return 'toast-' + Date.now() + '-' + Math.floor(Math.random() * 10)
     },
-    closeToast(id) {
+    closeToast(id: string): void {
       this.toasts = this.toasts.filter(t => t.id != id)
     }
   }
