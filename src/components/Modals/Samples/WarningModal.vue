@@ -36,7 +36,7 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-import BaseModal from './BaseModal.vue'
+import BaseModal from '../BaseModal.vue'
 
 export default defineComponent({
   name: 'Warning Modal',

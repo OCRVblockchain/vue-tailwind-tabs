@@ -1,9 +1,5 @@
-import DangerModal from "./DangerModal.vue";
-import WarningModal from "./WarningModal.vue";
-import SuccessModal from "./SuccessModal.vue";
+import DangerModal from "./Samples/DangerModal.vue";
+import WarningModal from "./Samples/WarningModal.vue";
+import SuccessModal from "./Samples/SuccessModal.vue";
 
-export {
-    DangerModal,
-    WarningModal,
-    SuccessModal
-}
+export { DangerModal, WarningModal, SuccessModal };
