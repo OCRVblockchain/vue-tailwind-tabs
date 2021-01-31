@@ -35,7 +35,9 @@
 import {ref, defineComponent} from 'vue'
 import Navbar from '../Navbar/index.vue'
 import Sidebar from '../Sidebar/index.vue'
-import { DangerModal, WarningModal, SuccessModal } from '../Modals/index'
+import SuccessModal from '../Modal/Samples/Success.vue'
+import WarningModal from '../Modal/Samples/Warning.vue'
+import DangerModal from '../Modal/Samples/Danger.vue'
 import Toasts from "../Toasts/index.vue";
 
 

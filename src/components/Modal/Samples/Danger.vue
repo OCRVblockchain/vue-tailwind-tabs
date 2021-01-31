@@ -1,5 +1,5 @@
 <template>
-  <BaseModal :isOpen="isOpen">
+  <Modal :isOpen="isOpen">
     <template v-slot:body>
       <div class="sm:flex sm:items-start">
         <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
@@ -33,17 +33,17 @@
         </button>
       </div>
     </template>
-  </BaseModal>
+  </Modal>
 </template>
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-import BaseModal from '../BaseModal.vue'
+import Modal from '../index.vue'
 
 export default defineComponent({
-  name: 'Danger Modal',
+  name: 'Danger modal',
   components: {
-    BaseModal
+    Modal
   },
   props: {
     title: {

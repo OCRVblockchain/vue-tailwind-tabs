@@ -55,7 +55,7 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: 'Base Modal',
+  name: 'Modal',
   props: {
     isOpen: {
       type: Boolean,
