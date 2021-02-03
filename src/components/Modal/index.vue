@@ -27,24 +27,27 @@
             'sm:max-w-6xl': size === '6xl',
             'sm:max-w-7xl': size === '7xl',
             'sm:max-w-full': size === 'full'
-           }" class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full"
-            role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+           }"
+             class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full"
+             role="dialog" aria-modal="true" aria-labelledby="modal-headline">
           <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
             <slot name="body"></slot>
           </div>
 
-          <div class="bg-gray-50 px-4 py-3 sm:px-6">
-            <slot name="footer">
+          <slot name="footer">
+            <div class="bg-gray-50 px-4 py-3 sm:px-6">
               <div class="sm:flex sm:flex-row-reverse">
-                <button type="button" @click="ok" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm">
+                <button type="button" @click="ok"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm">
                   Ок
                 </button>
-                <button type="button" @click="cancel" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                <button type="button" @click="cancel"
+                        class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
                   Отмена
                 </button>
               </div>
-            </slot>
-          </div>
+            </div>
+          </slot>
         </div>
       </div>
     </div>
@@ -68,7 +71,8 @@ export default defineComponent({
     ok: Function,
     cancel: Function
   },
-  setup: () => {}
+  setup: () => {
+  }
 })
 </script>
 
