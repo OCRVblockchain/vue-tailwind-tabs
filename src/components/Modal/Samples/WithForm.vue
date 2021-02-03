@@ -2,7 +2,7 @@
   <Modal :isOpen="isOpen" size="5xl">
     <template v-slot:body>
       <div class="flex sm:-m-6 sm:-mb-4">
-        <div class="w-5/6 flex flex-col justify-center">
+        <div class="flex flex-col justify-center">
           <div class="px-10 py-10">
             <span class="flex justify-center text-gray-600 font-medium text-3xl">Присоединяйтесь</span>
             <div class="mt-2 flex justify-center">
@@ -56,7 +56,7 @@
             </button>
           </div>
         </div>
-        <div class="relative h-full">
+        <div class="flex">
           <div class="absolute bg-white rounded-full py-2 px-2 top-3 right-3 cursor-pointer" @click="close">
             <svg class="h-4 w-4 text-gray-600"
                  xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </div>
-          <img src="./assets/withForm.png">
+          <img class="object-cover h-full" src="./assets/withForm.png">
         </div>
       </div>
     </template>
