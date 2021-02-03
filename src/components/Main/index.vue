@@ -24,7 +24,7 @@
         <a href="/#explorer">Обозреватель</a>
       </div>
       <div class="ml-12 text-gray-600 font-medium">
-        <a href="/#explorer">Помощь</a>
+        <a href="/#help">Помощь</a>
       </div>
       <div class="w-full px-6 flex justify-end">
         <button type="button" @click="isOpenModalWithForm = true"
@@ -61,28 +61,28 @@
 
       <div class="w-full flex flex-col px-5">
         <TabsWrapper>
-          <Tab>
-            <svg class="w-6 h-6 text-indigo-700 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          <Tab @click="clickTab(0)" :isActive="activeTab === 0">
+            <svg :class="{'text-indigo-700': activeTab === 0, 'font-medium text-gray-400': !activeTab !== 0}" class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                  stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
             </svg>
-            <span class="font-medium text-indigo-700">Все заявки</span>
+            <span :class="{'text-indigo-700': activeTab === 0, 'font-medium text-gray-400': !activeTab !== 0}" class="font-medium">Все заявки</span>
           </Tab>
-          <Tab :isActive="false">
-            <svg class="w-6 h-6 text-gray-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          <Tab @click="clickTab(1)" :isActive="activeTab === 1">
+            <svg :class="{'text-indigo-700': activeTab === 1, 'font-medium text-gray-400': !activeTab !== 1}" class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                  stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
-            <span class="font-medium text-gray-400">Активные</span>
+            <span :class="{'text-indigo-700': activeTab === 1, 'font-medium text-gray-400': !activeTab !== 1}" class="font-medium">Активные</span>
           </Tab>
-          <Tab :isActive="false">
-            <svg class="w-6 h-6 text-gray-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          <Tab @click="clickTab(2)" :isActive="activeTab === 2">
+            <svg :class="{'text-indigo-700': activeTab === 2, 'font-medium text-gray-400': !activeTab !== 2}" class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                  stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
-            <span class="font-medium text-gray-400">К оплате</span>
+            <span :class="{'text-indigo-700': activeTab === 2, 'font-medium text-gray-400': !activeTab !== 2}" class="font-medium">К оплате</span>
           </Tab>
         </TabsWrapper>
 
@@ -197,7 +197,8 @@ export default defineComponent({
       isOpenDangerModal: false,
       isOpenWarningModal: false,
       isOpenSuccessModal: false,
-      isOpenModalWithForm: false
+      isOpenModalWithForm: false,
+      activeTab: 0
     }
   },
   methods: {
@@ -218,6 +219,9 @@ export default defineComponent({
       }
 
       this.emitter.emit('toast', toast)
+    },
+    clickTab(n) {
+      this.activeTab = n
     }
   }
 })
