@@ -1,20 +1,20 @@
 {
-  "name": "vue-ts-modal",
-  "version": "0.0.4",
+  "name": "vue-tw-modal",
+  "version": "0.0.1",
   "description": "Modal Component (Vue + Vite + Tailwind CSS)",
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-ts-modal.umd.js",
-  "module": "./dist/vue-ts-modal.es.js",
+  "main": "./dist/vue-tw-modal.umd.js",
+  "module": "./dist/vue-tw-modal.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-ts-modal.es.js",
-      "require": "./dist/vue-ts-modal.umd.js"
+      "import": "./dist/vue-tw-modal.es.js",
+      "require": "./dist/vue-tw-modal.umd.js"
     }
   },
   "scripts": {
-    "build": "vuedx-typecheck . && vite build"
+    "build": "vite build"
   },
   "dependencies": {
     "vue": "^3.0.5"
@@ -23,7 +23,6 @@
     "@types/node": "^14.14.21",
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-sfc": "^3.0.5",
-    "@vuedx/typecheck": "^0.4.1",
     "@vuedx/typescript-plugin-vue": "^0.4.1",
     "autoprefixer": "^10.2.1",
     "postcss": "^8.2.4",

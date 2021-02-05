@@ -8,7 +8,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: path.resolve(__dirname, 'src/lib.ts'),
-            name: 'vue-ts-modal'
+            name: 'vue-tw-modal'
         },
         rollupOptions: {
             // make sure to externalize deps that shouldn't be bundled

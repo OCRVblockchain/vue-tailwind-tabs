@@ -56,7 +56,7 @@
 
 <script lang="ts">
 export default {
-  name: 'VueTsModal',
+  name: 'VueTwModal',
   props: {
     size: {
       type: String,
