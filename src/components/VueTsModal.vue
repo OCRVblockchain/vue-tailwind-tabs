@@ -55,7 +55,6 @@
 </template>
 
 <script lang="ts">
-
 export default {
   name: 'VueTsModal',
   props: {
@@ -69,6 +68,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-</style>
