@@ -64,7 +64,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </div>
-          <img class="object-cover h-full" src="./assets/withForm.png">
+          <img class="object-cover h-full" src="assets/image.png">
         </div>
       </div>
     </template>
@@ -78,7 +78,7 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-import Modal from '../index.vue'
+import Modal from '../src/components/index.vue'
 
 export default defineComponent({
   name: 'Modal with form',

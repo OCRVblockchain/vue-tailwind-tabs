@@ -55,25 +55,19 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue'
 
-export default defineComponent({
-  name: 'Modal',
+export default {
+  name: 'VueTsModal',
   props: {
-    isOpen: {
-      type: Boolean,
-      default: false
-    },
     size: {
       type: String,
       default: 'lg'
     },
+    isOpen: Boolean,
     ok: Function,
     cancel: Function
-  },
-  setup: () => {
   }
-})
+}
 </script>
 
 <style scoped>

@@ -1,1 +1,0 @@
-export const elasticUrl = 'http://185.17.141.59:9200'
