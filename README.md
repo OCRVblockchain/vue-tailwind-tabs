@@ -1,25 +1,25 @@
 # Vue Tailwind Modal
 
-A Vue component that creates a Modal using [Tailwind CSS](https://tailwindcss.com).
+Vue компонент для создания модальных окон, использующий [Tailwind CSS](https://tailwindcss.com).
 
-## Project setup
+## Установка проекта
 
 ```
 npm install --save @ocrv/vue-tailwind-modal
 ```
 
-## Using the modal
+## Использование
 
-### Installing globally
+### Глобальная установка
 
-In your main js file:
+В вашем main js файле:
 
 ```js
 import VueTailwindModal from "@ocrv/vue-tailwind-modal"
 Vue.component("VueTailwindModal", VueTailwindModal)
 ```
 
-### Using within a component
+### Внутри компонента
 
 In your component .vue file
 
@@ -34,7 +34,7 @@ export default {
   ...
 ```
 
-Once installed simply use as any other component:
+После установки, используйте как и любой другой компонент:
 
 ```html
 <vue-tailwind-modal
@@ -43,10 +43,13 @@ Once installed simply use as any other component:
   @update:showing="showing = $event"
   @close="afterClose()"
 >
-	<!-- Put your modal content here -->
+<!-- Вставьте здесь содержимое вашего модального окна -->
 </vue-tailwind-modal>
 ```
 
-To hide and show the modal simply pass a boolean to the :showing attribute (true to show, false to hide).
-You can capture the close event using @close to hide the modal (as in the example above) and do further processing.
-If you do not wish to show the close button (background top right) change :showClose to false
+Для показа и скрытия модального окна достаточно передать соответствующие логические true или false в :showing аттрибут.
+По-умочанию, компонент будет отображать кнопку закрытия модального окна в правом верхнем углу экрана. Убрать кнопку можно передав логическое false в :showClose аттрибут.
+Закрытие модального окна стандартной кнопкой (при :showClose="true") генерирует 2 события:
+- update:showing событие со значением false.
+- событие close
+Вы можете обрабатывать оба этих события, как в примере выше.
