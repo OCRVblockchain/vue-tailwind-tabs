@@ -1,6 +1,6 @@
 {
   "name": "@ocrv/vue-tailwind-modal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vue Tailwind Modal",
   "files": [
     "dist"
@@ -31,6 +31,20 @@
     "typescript": "^4.1.3",
     "vite": "^2.0.0-beta.12"
   },
+  "keywords": [
+    "Modal",
+    "Vue",
+    "Tailwind",
+    "CSS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OCRVblockchain/vue-tailwind-modal"
+  },
   "author": "Denis Kozlov <denis.kozlov@ocrv.ru>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OCRVblockchain/vue-tailwind-modal/issues"
+  },
+  "homepage": "https://github.com/OCRVblockchain/vue-tailwind-modal#readme"
 }

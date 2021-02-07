@@ -57,7 +57,7 @@
           </div>
         </div>
         <div class="flex">
-          <img class="object-cover h-full" src="./assets/withForm.png">
+          <img class="object-cover h-full" src="./assets/image.png">
         </div>
       </div>
     </VueTailwindModal>
