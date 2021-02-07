@@ -2,6 +2,8 @@
 
 Vue компонент для создания модальных окон, использующий [Tailwind CSS](https://tailwindcss.com).
 
+<img width="1439" alt="Снимок экрана 2021-02-07 в 17 02 42" src="https://user-images.githubusercontent.com/18230071/107148930-f1d85780-6966-11eb-8967-33df0d70b2c3.png">
+
 ## Установка проекта
 
 ```
