@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="px-5 py-5">
     <VueTailwindModal :showing="showing" @update:showing="showing = $event" @close="close()">
       <div class="flex">
         <div class="flex flex-col justify-center">
@@ -74,7 +74,7 @@ import {defineComponent} from 'vue'
 import VueTailwindModal from './VueTailwindModal.vue'
 
 export default defineComponent({
-  name: 'Modal With Form',
+  name: 'ExampleModal',
   components: {
     VueTailwindModal
   },

@@ -1,13 +1,13 @@
 <template>
-  <Test />
+  <Example />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Test from "./components/Test.vue";
+import Example from "./components/Example.vue";
 
 export default defineComponent({
   name: 'App',
-  components: { Test }
+  components: { Example }
 })
 </script>
