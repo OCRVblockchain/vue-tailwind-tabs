@@ -1,2 +1,2 @@
-import VueTwModal from './components/VueTwModal.vue'
-export default VueTwModal
+import VueTailwindModal from './components/VueTailwindModal.vue'
+export default VueTailwindModal
