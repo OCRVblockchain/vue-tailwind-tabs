@@ -1,7 +1,7 @@
 {
-  "name": "@ocrv/vue-tailwind-modal",
-  "version": "0.0.5",
-  "description": "Vue Tailwind Modal",
+  "name": "@ocrv/vue-tailwind-tabs",
+  "version": "0.0.1",
+  "description": "Vue Tailwind Tabs",
   "files": [
     "dist"
   ],
@@ -32,19 +32,20 @@
     "vite": "^2.0.0-beta.12"
   },
   "keywords": [
-    "Modal",
+    "Tab",
+    "Tabs",
     "Vue",
     "Tailwind",
     "CSS"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/OCRVblockchain/vue-tailwind-modal"
+    "url": "https://github.com/OCRVblockchain/vue-tailwind-tabs"
   },
   "author": "Denis Kozlov <denis.kozlov@ocrv.ru>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/OCRVblockchain/vue-tailwind-modal/issues"
+    "url": "https://github.com/OCRVblockchain/vue-tailwind-tabs/issues"
   },
-  "homepage": "https://github.com/OCRVblockchain/vue-tailwind-modal#readme"
+  "homepage": "https://github.com/OCRVblockchain/vue-tailwind-tabs#readme"
 }

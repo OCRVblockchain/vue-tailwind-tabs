@@ -1,92 +1,87 @@
 <template>
-  <div class="px-5 py-5">
-    <VueTailwindModal :showing="showing" @update:showing="showing = $event" @close="close()">
-      <div class="flex">
-        <div class="flex flex-col justify-center">
-          <div class="px-10 py-10">
-            <span class="flex justify-center text-gray-600 font-medium text-3xl">Присоединяйтесь</span>
-            <div class="mt-2 flex justify-center">
-            <span class="text-gray-500">
-              Уже зарегистрированы?
-            </span>
-              <a class="pl-1 text-red-500 font-medium underline" href="#" @click="signIn">Вход</a>
-            </div>
-            <div class="relative border-2 rounded-lg border-red-100 mt-5 px-2 py-2">
-              <div class="absolute inline-flex items-center bottom-0 top-0">
-                <svg class="w-4 h-4 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                </svg>
-              </div>
-              <input class="pl-7 w-full outline-none text-gray-500" type="text" placeholder="Полное имя">
-            </div>
-            <div class="relative border-2 rounded-lg border-red-100 mt-3 px-2 py-2">
-              <div class="absolute inline-flex items-center bottom-0 top-0">
-                <svg class="w-4 h-4 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
-                </svg>
-              </div>
-              <input class="pl-7 w-full outline-none text-gray-500" type="text" placeholder="Электронная почта">
-            </div>
-            <div class="relative border-2 rounded-lg border-red-100 mt-3 px-2 py-2">
-              <div class="absolute inline-flex items-center bottom-0 top-0">
-                <svg class="w-4 h-4 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                </svg>
-              </div>
-              <input class="pl-7 w-full outline-none text-gray-500" type="password" placeholder="Пароль">
-            </div>
-            <div class="relative border-2 rounded-lg border-red-100 mt-3 px-2 py-2">
-              <div class="absolute inline-flex items-center bottom-0 top-0">
-                <svg class="w-4 h-4 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                </svg>
-              </div>
-              <input class="pl-7 w-full outline-none text-gray-500" type="password" placeholder="Подтверждение пароля">
-            </div>
-            <button class="mt-3 w-full py-2 bg-red-500 rounded-lg focus:outline-none">
-              <span class="text-white">Зарегистрироваться</span>
-            </button>
-          </div>
-        </div>
-        <div class="flex">
-          <img class="object-cover h-full" src="./assets/image.png">
-        </div>
-      </div>
-    </VueTailwindModal>
+  <main class="min-h-screen bg-blue-50">
+    <section class="w-full flex flex-col p-5">
 
-    <button type="button" @click="showing = true"
-            class="focus:outline-none bg-green-600 text-white ml-3 px-8 py-2 rounded-lg">
-      Нажмите
-    </button>
-  </div>
+      <TabsWrapper>
+        <Tab title="Все заявки" :isActive="activeTab === 'orders'" @click="clickTab('orders')">
+          <template v-slot:icon>
+            <svg :class="{'text-indigo-700': activeTab === 'orders'}"
+                 class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+            </svg>
+          </template>
+        </Tab>
+        <Tab title="Активные" :isActive="activeTab === 'active'" @click="clickTab('active')">
+          <template v-slot:icon>
+            <svg :class="{'text-indigo-700': activeTab === 'active'}"
+                 class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </template>
+        </Tab>
+        <Tab title="К оплате" :isActive="activeTab === 'toInvoice'" @click="clickTab('toInvoice')">
+          <template v-slot:icon>
+            <svg :class="{'text-indigo-700': activeTab === 'toInvoice'}"
+                 class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </template>
+        </Tab>
+      </TabsWrapper>
+
+      <TabsContent>
+          <div v-if="activeTab === 'orders'">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, facere hic in inventore laudantium
+            omnis perferendis temporibus totam? Adipisci aliquam dolore doloribus dolorum eaque necessitatibus obcaecati
+            voluptate? Odit, placeat, quos!
+          </div>
+          <div v-if="activeTab === 'active'">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, assumenda, blanditiis consectetur cum dolor
+            hic impedit in laboriosam libero obcaecati praesentium quia repellat sed similique sit soluta vel veritatis
+            vitae!
+          </div>
+          <div v-if="activeTab === 'toInvoice'">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid amet beatae cupiditate dolore
+            doloremque enim, eveniet expedita hic illo laborum maiores nesciunt obcaecati quae similique tempora, vitae
+            voluptatem voluptates.
+          </div>
+      </TabsContent>
+
+    </section>
+  </main>
 </template>
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-import VueTailwindModal from './VueTailwindModal.vue'
+import {TabsWrapper, Tab, TabsContent} from './VueTailwindTabs/index.ts'
 
 export default defineComponent({
-  name: 'ExampleModal',
+  name: 'Tailwind Tabs Example',
   components: {
-    VueTailwindModal
+    TabsWrapper,
+    Tab,
+    TabsContent
   },
   data() {
     return {
-      showing: false
+      activeTab: 'orders'
     }
   },
   methods: {
-    close() {
-      console.log("after close...")
+    clickTab(n) {
+      this.activeTab = n
     }
   }
 })
 </script>
+
+<style scoped>
+</style>
