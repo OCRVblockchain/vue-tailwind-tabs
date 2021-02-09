@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white shadow-lg rounded-r-xl rounded-b-xl">
+  <section class="bg-white shadow-lg sm:rounded-r-xl rounded-b-xl">
     <div class="p-5 text-gray-700">
       <slot/>
     </div>

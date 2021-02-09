@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex">
+  <ul class="block sm:flex">
     <slot></slot>
   </ul>
 </template>

@@ -5,7 +5,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+        borderRadius: ['first']
+    },
   },
   plugins: [],
 };
