@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build"
   },
   "dependencies": {
     "@vue/cli-plugin-unit-mocha": "^4.5.11",
