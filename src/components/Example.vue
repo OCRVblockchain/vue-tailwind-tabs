@@ -3,7 +3,7 @@
     <section class="w-full flex flex-col p-5">
 
       <TabsWrapper>
-        <Tab title="Все заявки" :isActive="activeTab === 'orders'" @click="clickTab('orders')">
+        <Tab title="Orders" :isActive="activeTab === 'orders'" @click="clickTab('orders')">
           <template v-slot:icon>
             <svg :class="{'text-indigo-700': activeTab === 'orders'}"
                  class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -14,7 +14,7 @@
             </svg>
           </template>
         </Tab>
-        <Tab title="Активные" :isActive="activeTab === 'active'" @click="clickTab('active')">
+        <Tab title="Active" :isActive="activeTab === 'active'" @click="clickTab('active')">
           <template v-slot:icon>
             <svg :class="{'text-indigo-700': activeTab === 'active'}"
                  class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -24,7 +24,7 @@
             </svg>
           </template>
         </Tab>
-        <Tab title="К оплате" :isActive="activeTab === 'toInvoice'" @click="clickTab('toInvoice')">
+        <Tab title="To invoice" :isActive="activeTab === 'toInvoice'" @click="clickTab('toInvoice')">
           <template v-slot:icon>
             <svg :class="{'text-indigo-700': activeTab === 'toInvoice'}"
                  class="font-medium text-gray-400 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -38,21 +38,34 @@
       </TabsWrapper>
 
       <TabsContent>
-          <div v-if="activeTab === 'orders'">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, facere hic in inventore laudantium
-            omnis perferendis temporibus totam? Adipisci aliquam dolore doloribus dolorum eaque necessitatibus obcaecati
-            voluptate? Odit, placeat, quos!
-          </div>
-          <div v-if="activeTab === 'active'">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, assumenda, blanditiis consectetur cum dolor
-            hic impedit in laboriosam libero obcaecati praesentium quia repellat sed similique sit soluta vel veritatis
-            vitae!
-          </div>
-          <div v-if="activeTab === 'toInvoice'">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid amet beatae cupiditate dolore
-            doloremque enim, eveniet expedita hic illo laborum maiores nesciunt obcaecati quae similique tempora, vitae
-            voluptatem voluptates.
-          </div>
+        <div v-if="activeTab === 'orders'">
+          Ad alias animi at consequuntur cumque delectus, dolor doloribus illum in, odit porro quasi quo reprehenderit
+          saepe suscipit tempora totam ullam unde veritatis
+          voluptates. At, cumque cupiditate dolores fuga illum iure laboriosam minus neque nihil nobis numquam odit,
+          perferendis quia repellendus suscipit ut veniam. Earum libero neque quia similique voluptates. Aspernatur
+          earum maxime quae quisquam repellat sunt vel voluptatum? Autem deleniti, dolore, dolorum est facere harum hic
+          inventore ipsum molestias nisi qui ratione recusandae rem repellendus sequi tempore vitae? Ab deleniti, eos
+          expedita facere illo ipsa nobis, perspiciatis repellat repudiandae tempora, velit.
+        </div>
+        <div v-if="activeTab === 'active'">
+          Aspernatur cupiditate, dolorum earum eius ex facilis
+          illum maiores nihil optio placeat, quam quos repellendus suscipit tempora, voluptate! Alias asperiores
+          assumenda beatae commodi dolorum, laudantium libero molestiae nam officiis praesentium quisquam soluta totam,
+          veritatis. A, adipisci error ex illum iusto unde. A animi assumenda at, dolorem ducimus enim error incidunt,
+          ipsam iure magnam nobis omnis quae quasi quod recusandae, reiciendis rerum sequi. Alias animi consequuntur
+          delectus distinctio enim, et expedita ipsam itaque labore neque nobis numquam obcaecati, officia perferendis
+          possimus provident quaerat qui, quibusdam quis quos ratione recusandae repellat reprehenderit sit voluptate!
+        </div>
+        <div v-if="activeTab === 'toInvoice'">
+          Deserunt ducimus explicabo facere ipsam,
+          necessitatibus quod sit voluptatem! Ad adipisci aut autem, cum debitis eum exercitationem illum in ipsam
+          itaque necessitatibus nostrum pariatur quaerat quidem ratione, similique vel velit, voluptate voluptates
+          voluptatibus. Animi aperiam assumenda atque autem, cupiditate deserunt dignissimos doloribus eveniet, nemo
+          quae quod sunt voluptatibus? Ab aliquam aut commodi cupiditate deleniti deserunt et excepturi laudantium
+          molestias nam natus officiis perspiciatis, reiciendis, repellat soluta! Dignissimos eaque fugiat minus odit
+          qui quo, quos recusandae. Beatae culpa dolores ea enim eos explicabo ipsum, laudantium molestias natus
+          obcaecati officia quia temporibus totam voluptas.
+        </div>
       </TabsContent>
 
     </section>
@@ -61,7 +74,13 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-import {TabsWrapper, Tab, TabsContent} from './VueTailwindTabs/index.ts'
+import {Tab, TabsContent, TabsWrapper} from './VueTailwindTabs/index.ts'
+
+type Tab = string
+
+interface Data {
+  activeTab: Tab
+}
 
 export default defineComponent({
   name: 'Tailwind Tabs Example',
@@ -70,14 +89,14 @@ export default defineComponent({
     Tab,
     TabsContent
   },
-  data() {
+  data(): Data {
     return {
       activeTab: 'orders'
     }
   },
   methods: {
-    clickTab(n) {
-      this.activeTab = n
+    clickTab(name: Tab): void {
+      this.activeTab = name
     }
   }
 })

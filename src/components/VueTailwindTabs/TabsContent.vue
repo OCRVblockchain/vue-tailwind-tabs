@@ -10,8 +10,7 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: 'Tab Content',
-  props: {}
+  name: 'Tab Content'
 })
 </script>
 
