@@ -2,6 +2,8 @@
 
 Vue component for creating tabs using [Tailwind CSS](https://tailwindcss.com).
 
+<img width="904" alt="Снимок экрана 2021-02-09 в 09 35 45" src="https://user-images.githubusercontent.com/18230071/107325105-3b858700-6aba-11eb-9a49-3c228db661ec.png">
+
 ## Install
 
 ```
