@@ -8,7 +8,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: path.resolve(__dirname, 'src/lib.ts'),
-            name: 'vue-tailwind-modal'
+            name: 'vue-tailwind-tabs'
         },
         rollupOptions: {
             // make sure to externalize deps that shouldn't be bundled

@@ -1,39 +1,46 @@
 {
-  "type": "module",
   "name": "@ocrv/vue-tailwind-tabs",
   "version": "0.0.3",
   "description": "Vue Tailwind Tabs",
+  "author": "Denis Kozlov <denis.kozlov@ocrv.ru>",
+  "scripts": {
+    "build": "vite build",
+    "test:unit": "vue-cli-service test:unit",
+    "dev": "vite"
+  },
+  "main": "./dist/vue-tailwind-tabs.umd.js",
+  "module": "./dist/vue-tailwind-tabs.es.js",
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-tailwind-modal.umd.js",
-  "module": "./dist/vue-tailwind-modal.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/vue-tailwind-modal.es.js",
-      "require": "./dist/vue-tailwind-modal.umd.js"
-    }
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
-  },
   "dependencies": {
-    "@vue/cli-plugin-unit-mocha": "^4.5.11",
     "vue": "^3.0.5"
   },
   "devDependencies": {
     "@types/node": "^14.14.21",
     "@vitejs/plugin-vue": "^1.0.4",
+    "@vue/cli-plugin-unit-mocha": "^4.5.11",
+    "@vue/cli-service": "^4.5.11",
     "@vue/compiler-sfc": "^3.0.5",
     "@vue/test-utils": "^2.0.0-alpha.8",
     "@vuedx/typescript-plugin-vue": "^0.4.1",
     "autoprefixer": "^10.2.1",
+    "chai": "^4.1.2",
     "postcss": "^8.2.4",
     "tailwindcss": "^2.0.2",
     "typescript": "^4.1.3",
     "vite": "^2.0.0-beta.12"
   },
+  "bugs": {
+    "url": "https://github.com/OCRVblockchain/vue-tailwind-tabs/issues"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/vue-tailwind-tabs.es.js",
+      "require": "./dist/vue-tailwind-tabs.umd.js"
+    }
+  },
+  "homepage": "https://github.com/OCRVblockchain/vue-tailwind-tabs#readme",
   "keywords": [
     "Tab",
     "Tabs",
@@ -41,14 +48,9 @@
     "Tailwind",
     "CSS"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/OCRVblockchain/vue-tailwind-tabs"
-  },
-  "author": "Denis Kozlov <denis.kozlov@ocrv.ru>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/OCRVblockchain/vue-tailwind-tabs/issues"
-  },
-  "homepage": "https://github.com/OCRVblockchain/vue-tailwind-tabs#readme"
+  }
 }
