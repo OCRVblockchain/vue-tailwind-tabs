@@ -61,3 +61,5 @@ Next, in your HTML code:
     </div>
 </TabsContent>
 ```
+
+More examples [here](https://github.com/OCRVblockchain/vue-tailwind-tabs/blob/main/src/components/Example.vue)

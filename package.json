@@ -1,6 +1,6 @@
 {
   "name": "@ocrv/vue-tailwind-tabs",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Vue Tailwind Tabs",
   "files": [
     "dist"
