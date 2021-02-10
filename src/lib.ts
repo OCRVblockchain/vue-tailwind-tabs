@@ -1,6 +1,6 @@
 import {TabsWrapper, Tab, TabsContent}  from './components/VueTailwindTabs/index'
 
-export default {
+export {
     TabsWrapper,
     Tab,
     TabsContent
