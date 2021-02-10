@@ -1,12 +1,13 @@
 {
   "name": "@ocrv/vue-tailwind-tabs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Vue Tailwind Tabs",
   "author": "Denis Kozlov <denis.kozlov@ocrv.ru>",
   "scripts": {
     "build": "vite build",
     "test:unit": "vue-cli-service test:unit",
-    "dev": "vite"
+    "dev": "vite",
+    "style": "tailwindcss build src/assets/styles/index.css -o src/assets/styles/tailwind.css"
   },
   "main": "./dist/vue-tailwind-tabs.umd.js",
   "module": "./dist/vue-tailwind-tabs.es.js",

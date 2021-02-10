@@ -10,6 +10,7 @@ jobs:
         with:
           node-version: 12
       - run: npm install
+      - run: npm run style
       - run: npm run build
       - run: npm run test:unit
       - uses: JS-DevTools/npm-publish@v1

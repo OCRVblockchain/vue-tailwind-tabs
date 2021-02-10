@@ -1,13 +1,20 @@
 module.exports = {
-  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {
-        borderRadius: ['first']
+    purge: {
+        enabled: true,
+        content: [
+            './src/**/*.vue',
+            './src/**/*.js',
+            './public/**/*.html',
+        ]
     },
-  },
-  plugins: [],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+        extend: {},
+    },
+    variants: {
+        extend: {
+            borderRadius: ['first']
+        },
+    },
+    plugins: [],
 };
