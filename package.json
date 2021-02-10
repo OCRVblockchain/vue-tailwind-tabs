@@ -1,6 +1,6 @@
 {
   "name": "@ocrv/vue-tailwind-tabs",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "Vue Tailwind Tabs",
   "author": "Denis Kozlov <denis.kozlov@ocrv.ru>",
   "scripts": {
@@ -44,11 +44,21 @@
   },
   "homepage": "https://github.com/OCRVblockchain/vue-tailwind-tabs#readme",
   "keywords": [
-    "Tab",
-    "Tabs",
-    "Vue",
-    "Tailwind",
-    "CSS"
+    "tab",
+    "tabs",
+    "tailwind",
+    "css",
+    "design",
+    "ui",
+    "vue",
+    "vue-ui",
+    "vue.js",
+    "vue-component",
+    "component",
+    "components",
+    "uikit",
+    "front-end",
+    "frontend"
   ],
   "license": "MIT",
   "repository": {
