@@ -1,6 +1,6 @@
 {
   "name": "@ocrv/vue-tailwind-tabs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Vue Tailwind Tabs",
   "author": "Denis Kozlov <denis.kozlov@ocrv.ru>",
   "scripts": {
