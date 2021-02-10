@@ -1,7 +1,8 @@
 # Vue Tailwind Tabs
 
 ![build](https://github.com/OCRVblockchain/vue-tailwind-tabs/workflows/build/badge.svg)
-![downloads](https://img.shields.io/npm/dw/@ocrv/vue-tailwind-tabs)
+![downloads-week](https://img.shields.io/npm/dw/@ocrv/vue-tailwind-tabs)
+![downloads](https://img.shields.io/npm/dt/@ocrv/vue-tailwind-tabs)
 
 Vue component for creating tabs using [Tailwind CSS](https://tailwindcss.com).
 
