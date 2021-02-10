@@ -16,7 +16,13 @@ npm install --save @ocrv/vue-tailwind-tabs
 
 ## Usage
 
-Import the components
+1. Import library styles
+
+```js
+import '@ocrv/vue-tailwind-tabs/styles'
+```
+
+2. Import the components
 
 ```js
 import {TabsWrapper, TabsContent, Tab} from '@ocrv/vue-tailwind-tabs'

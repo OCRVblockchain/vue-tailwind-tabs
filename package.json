@@ -1,6 +1,6 @@
 {
   "name": "@ocrv/vue-tailwind-tabs",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Vue Tailwind Tabs",
   "author": "Denis Kozlov <denis.kozlov@ocrv.ru>",
   "scripts": {
@@ -39,7 +39,8 @@
     ".": {
       "import": "./dist/vue-tailwind-tabs.es.js",
       "require": "./dist/vue-tailwind-tabs.umd.js"
-    }
+    },
+    "./styles": "./dist/style.css"
   },
   "homepage": "https://github.com/OCRVblockchain/vue-tailwind-tabs#readme",
   "keywords": [
