@@ -1,5 +1,5 @@
 <template>
-  <main class="min-h-screen bg-blue-50">
+  <main class="min-h-screen bg-white">
     <section class="w-full flex flex-col p-5">
 
       <TabsWrapper>

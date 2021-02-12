@@ -1,5 +1,5 @@
 <template>
-  <li @click="click" :class="{'bg-gradient-to-b from-white to-gray-100': !isActive}" class="px-4 py-2 sm:mr-0.5 flex items-center bg-white border-b border-gray-100 sm:border-0 first:rounded-t-xl sm:rounded-t-xl cursor-pointer">
+  <li @click="click" :class="{'shadow-custom': isActive, 'bg-gradient-to-b from-white to-gray-100': !isActive}" class="z-10 px-4 py-2 sm:mr-0.5 flex items-center bg-white border-t border-r border-l border-gray-200 first:rounded-t-xl sm:rounded-t-xl cursor-pointer">
     <slot name="icon"></slot>
     <span :class="{'text-indigo-700': isActive}" class="font-medium text-gray-400">{{ title }}</span>
   </li>
