@@ -1,7 +1,6 @@
 <template>
   <main class="min-h-screen bg-white">
     <section class="w-full flex flex-col p-5">
-
       <TabsWrapper>
         <Tab title="Orders" :isActive="activeTab === 'orders'" @click="clickTab('orders')">
           <template v-slot:icon>
@@ -36,7 +35,6 @@
           </template>
         </Tab>
       </TabsWrapper>
-
       <TabsContent>
         <div v-if="activeTab === 'orders'">
           Ad alias animi at consequuntur cumque delectus, dolor doloribus illum in, odit porro quasi quo reprehenderit
@@ -67,7 +65,6 @@
           obcaecati officia quia temporibus totam voluptas.
         </div>
       </TabsContent>
-
     </section>
   </main>
 </template>
